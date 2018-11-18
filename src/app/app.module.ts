@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RecordListComponent } from './record-list/record-list.component';
+import { HomeComponent } from './home/home.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecordListComponent
+    HomeComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule
