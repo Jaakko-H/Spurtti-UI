@@ -1,3 +1,4 @@
+import { MatGridListModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -16,6 +17,7 @@ import { ROUTES } from './app-routing';
   ],
   imports: [
     BrowserModule,
+    MatGridListModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],
