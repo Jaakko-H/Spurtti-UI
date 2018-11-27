@@ -1,8 +1,16 @@
 <div class="topbar">
-  <a href="/home">
-    <img src="../../assets/img/logo.bmp" type="link">
-  </a>
-  <mat-grid-list cols="4">
-
-  </mat-grid-list>
+  <mat-toolbar class="topbar-row" color="primary">
+    <mat-toolbar-row class="topbar-row">
+      <span class="topbar-row">
+        <a routerLink="/home">
+          <img src="../../assets/img/logo.bmp" class="topbar-row" type="link">
+        </a>
+      </span>
+      <span class="topbar-row">
+        <a mat-button class="topbar-row" color="accent" routerLink="/view-records">
+          View records
+        </a>
+      </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
 </div>

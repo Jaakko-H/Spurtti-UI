@@ -1,8 +1,13 @@
 .topbar {
   width: 100%;
-  height: 50px;
+  height: 64px;
   background-color: #46fca7;
   border-width: 1px;
   border-color: #0b0955;
   border-style: solid;
+}
+
+.topbar-row {
+  height: 64px;
+  padding: 0px;
 }
