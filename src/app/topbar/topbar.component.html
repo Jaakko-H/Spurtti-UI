@@ -1,15 +1,35 @@
 <div class="topbar">
   <mat-toolbar class="topbar-row" color="primary">
     <mat-toolbar-row class="topbar-row">
-      <span class="topbar-row">
+      <span class="topbar-logo">
         <a routerLink="/home">
-          <img src="../../assets/img/logo.bmp" class="topbar-row" type="link">
+          <img src="../../assets/img/logo.bmp" class="topbar-logo" type="link">
         </a>
       </span>
-      <span class="topbar-row">
-        <a mat-button class="topbar-row" color="accent" routerLink="/view-records">
-          View records
-        </a>
+      <span class="topbar-cell">
+          <button mat-button class="topbar-button" [matMenuTriggerFor]="homeMenu">
+            Home
+            <mat-icon>arrow_drop_down</mat-icon>
+          </button>
+          <mat-menu #homeMenu="matMenu">
+            <button mat-menu-item routerLink="/home">News</button>
+            <button mat-menu-item>Info</button>
+          </mat-menu>
+        </span>
+      <span class="topbar-cell">
+        <button mat-button class="topbar-button" [matMenuTriggerFor]="myRecordsMenu">
+          My Records
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #myRecordsMenu="matMenu">
+          <button mat-menu-item>Add New</button>
+          <button mat-menu-item routerLink="/view-records">View</button>
+        </mat-menu>
+      </span>
+      <span class="topbar-cell">
+        <button mat-button class="topbar-button">
+          Public Records
+        </button>
       </span>
     </mat-toolbar-row>
   </mat-toolbar>
