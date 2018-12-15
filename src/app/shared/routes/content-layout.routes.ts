@@ -8,5 +8,10 @@ export const CONTENT_ROUTES: Routes = [
   {
     path: 'view-records',
     loadChildren: './modules/view-records/view-records.module#ViewRecordsModule'
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];

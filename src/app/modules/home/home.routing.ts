@@ -6,13 +6,8 @@ import { HomeComponent } from './pages/home.component';
 export const routes: Routes = [
     {
       path: '',
-      children: [
-        {
-          path: 'home',
-          component: HomeComponent
-        }
-      ]
-    },
+      component: HomeComponent
+    }
 ];
 
 @NgModule({

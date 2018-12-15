@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ViewRecordsComponent } from './pages/view-records.component';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
@@ -8,4 +9,8 @@ const routes: Routes = [
   }
 ];
 
-export const ViewRecordsRoutes = RouterModule.forChild(routes);
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class ViewRecordsRoutingModule { }
