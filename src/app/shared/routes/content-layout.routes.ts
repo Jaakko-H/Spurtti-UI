@@ -6,6 +6,10 @@ export const CONTENT_ROUTES: Routes = [
     loadChildren: './modules/home/home.module#HomeModule'
   },
   {
+    path: 'create-record',
+    loadChildren: './modules/create-record/create-record.module#CreateRecordModule'
+  },
+  {
     path: 'view-records',
     loadChildren: './modules/view-records/view-records.module#ViewRecordsModule'
   },
