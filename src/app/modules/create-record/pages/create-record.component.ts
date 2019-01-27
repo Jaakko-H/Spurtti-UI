@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateRecordComponent implements OnInit {
 
+  public datetime: any;
+
   constructor() { }
 
   ngOnInit() {
