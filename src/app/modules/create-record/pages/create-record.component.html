@@ -1,33 +1,27 @@
 <mat-card>
   <mat-card-title>Save a Record</mat-card-title>
-  <p>
-    <mat-form-field>
-      <mat-label>Distance</mat-label>
-      <input matInput>
-      <label matSuffix>Km</label>
-      <mat-hint>Distance in kilometers, e.g. 1.23</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field>
-      <mat-label>Duration</mat-label>
-      <input matInput>
-      <mat-icon matSuffix>timer</mat-icon>
-      <mat-hint>Duration of the exercise in format hh:mm:ss, e.g. 1:15:59</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field>
-      <mat-label>Date of the record</mat-label>
-      <input matInput [owlDateTime]="datetime">
-      <mat-icon matSuffix [owlDateTimeTrigger]="datetime">calendar_today</mat-icon>
-      <mat-hint>The date when the record was made, in format MM/dd/yyyy</mat-hint>
-      <owl-date-time #datetime pickerType="calendar"></owl-date-time>
-    </mat-form-field>
-  </p>
-  <p>
-    <button mat-button>
-      Submit
-    </button>
-  </p>
+  <form>
+    <p>
+      <mat-form-field class="form-field">
+        <mat-label>Distance</mat-label>
+        <input matInput />
+        <label matSuffix>Km</label>
+        <mat-hint>Distance in kilometers, e.g. 1.23</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Duration</mat-label>
+        <input matInput />
+        <mat-icon matSuffix>timer</mat-icon>
+        <mat-hint>Duration of the exercise in format hh:mm:ss, e.g. 1:15:59</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Date of the record</mat-label>
+        <input matInput [owlDateTime]="datetime" />
+        <mat-icon matSuffix [owlDateTimeTrigger]="datetime">calendar_today</mat-icon>
+        <mat-hint>The date when the record was made, in format MM/dd/yyyy</mat-hint>
+        <owl-date-time #datetime pickerType="calendar"></owl-date-time>
+      </mat-form-field>
+    </p>
+    <p><button mat-button>Submit</button></p>
+  </form>
 </mat-card>
