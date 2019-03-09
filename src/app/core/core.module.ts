@@ -1,10 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { DistanceBasedRecordApiService } from './services/api/records/distance-based-record-api.service';
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
+  ],
+  providers: [
+    DistanceBasedRecordApiService
   ]
 })
 export class CoreModule {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DistanceBasedRecord } from '@app/shared/models/DistanceBasedRecord';
+import { DistanceBasedRecordApiService } from '@app/core/services/api/records/distance-based-record-api.service';
 
 @Component({
   selector: 'app-view-records',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewRecordsComponent implements OnInit {
 
-  constructor() { }
+  recordData: DistanceBasedRecord[] = [];
+  displayedColumns = ['entryTime'];
 
-  ngOnInit() {
+  constructor(private distanceBasedRecordApiService: DistanceBasedRecordApiService) {}
+
+  async ngOnInit() {
+    this.recordData = await this.distanceBasedRecordApiService.getRecords();
   }
-
 }

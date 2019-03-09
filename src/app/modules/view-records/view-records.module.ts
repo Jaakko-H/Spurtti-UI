@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ViewRecordsComponent } from './pages/view-records.component';
 import { SharedModule } from '@app/shared';
 import { ViewRecordsRoutingModule } from './view-records.routing';
+import { MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { ViewRecordsRoutingModule } from './view-records.routing';
   ],
   imports: [
     CommonModule,
+    MatTableModule,
     SharedModule,
     ViewRecordsRoutingModule
   ]
