@@ -1,0 +1,12 @@
+<table mat-table
+    class="mat-elevation-z8"
+    [dataSource]="recordData">
+
+  <ng-container matColumnDef="entryTime">
+    <th mat-header-cell *matHeaderCellDef>Entry time</th>
+    <th mat-cell *matCellDef="let record"> {{ record.entryTime }} </th>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
