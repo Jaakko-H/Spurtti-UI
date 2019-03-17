@@ -6,7 +6,7 @@ import { environment } from '@env/environment';
 @Injectable()
 export class DistanceBasedRecordApiService {
 
-  baseUrl = environment.baseUrl + '/records';
+  baseUrl = environment.spurttiApiEndpoint + '/records';
 
   constructor(private httpClient: HttpClient) {
   }
