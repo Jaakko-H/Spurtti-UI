@@ -12,9 +12,9 @@ export class ViewRecordsComponent implements OnInit {
   recordData: DistanceBasedRecord[] = [];
   displayedColumns = ['entryTime'];
 
-  constructor(private distanceBasedRecordApiService: DistanceBasedRecordApiService) {}
+  public constructor(private distanceBasedRecordApiService: DistanceBasedRecordApiService) {}
 
-  async ngOnInit() {
+  public async ngOnInit() {
     this.recordData = await this.distanceBasedRecordApiService.getRecords();
   }
 }
