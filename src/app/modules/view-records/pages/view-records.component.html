@@ -7,6 +7,21 @@
     <th mat-cell *matCellDef="let record"> {{ record.entryTime }} </th>
   </ng-container>
 
+  <ng-container matColumnDef="sportType">
+    <th mat-header-cell *matHeaderCellDef>Sport type</th>
+    <th mat-cell *matCellDef="let record"> {{ record.sportType }} </th>
+  </ng-container>
+
+  <ng-container matColumnDef="distance">
+    <th mat-header-cell *matHeaderCellDef>Distance</th>
+    <th mat-cell *matCellDef="let record"> {{ record.distance }} </th>
+  </ng-container>
+
+  <ng-container matColumnDef="duration">
+    <th mat-header-cell *matHeaderCellDef>Duration</th>
+    <th mat-cell *matCellDef="let record"> {{ record.duration }} </th>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

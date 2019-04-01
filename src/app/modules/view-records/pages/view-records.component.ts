@@ -10,7 +10,7 @@ import { DistanceBasedRecordApiService } from '@app/core/services/api/records/di
 export class ViewRecordsComponent implements OnInit {
 
   recordData: DistanceBasedRecord[] = [];
-  displayedColumns = ['entryTime'];
+  displayedColumns = ['entryTime', 'sportType', 'distance', 'duration'];
 
   public constructor(private distanceBasedRecordApiService: DistanceBasedRecordApiService) {}
 
