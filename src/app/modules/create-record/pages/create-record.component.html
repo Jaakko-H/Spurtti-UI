@@ -15,17 +15,19 @@
         <mat-label>Duration</mat-label>
         <input name="duration"
             matInput
-            [(ngModel)]="duration"
+            [(ngModel)]="durationString"
             required />
         <mat-icon matSuffix>timer</mat-icon>
-        <mat-hint>Duration of the exercise in format hh:mm:ss, e.g. 1:15:59</mat-hint>
+        <mat-hint>Duration of the exercise in format hh:mm:ss.SSS, e.g. 1:15:59.123.
+          Hours, minutes and milliseconds can be also omitted, e.g. 12:36 or 50.125</mat-hint>
       </mat-form-field>
       <mat-form-field class="form-field">
         <mat-label>Date and time of the record</mat-label>
         <input name="entryTime"
             matInput
             [(ngModel)]="entryTime"
-            [owlDateTime]="datetime" />
+            [owlDateTime]="datetime"
+            required />
         <mat-icon matSuffix [owlDateTimeTrigger]="datetime">calendar_today</mat-icon>
         <mat-hint>The date when the record was made, in format MM/dd/yyyy</mat-hint>
         <owl-date-time #datetime pickerType="both"></owl-date-time>
