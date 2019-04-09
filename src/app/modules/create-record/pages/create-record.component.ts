@@ -19,7 +19,9 @@ export class CreateRecordComponent implements OnInit {
 
   public constructor(private distanceBasedRecordApiService: DistanceBasedRecordApiService) {}
 
-  public ngOnInit() {}
+  public ngOnInit() {
+    this.entryTime = new Date();
+  }
 
   public async onSubmit(): Promise<void> {
     const duration = this.validateDuration();
