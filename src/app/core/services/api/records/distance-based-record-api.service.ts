@@ -11,6 +11,10 @@ export class DistanceBasedRecordApiService {
   constructor(private httpClient: HttpClient) {
   }
 
+  public async createRecord(record: DistanceBasedRecord): Promise<DistanceBasedRecord> {
+    return await this.httpClient.post<DistanceBasedRecord>(this.baseUrl + '/distance-based', record).toPromise();
+  }
+
   public async getRecords(): Promise<DistanceBasedRecord[]> {
     return await this.httpClient.get<DistanceBasedRecord[]>(this.baseUrl + '/distance-based').toPromise();
   }

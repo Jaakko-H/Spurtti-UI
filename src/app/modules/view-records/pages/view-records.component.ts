@@ -10,11 +10,11 @@ import { DistanceBasedRecordApiService } from '@app/core/services/api/records/di
 export class ViewRecordsComponent implements OnInit {
 
   recordData: DistanceBasedRecord[] = [];
-  displayedColumns = ['entryTime'];
+  displayedColumns = ['entryTime', 'sportType', 'distance', 'duration'];
 
-  constructor(private distanceBasedRecordApiService: DistanceBasedRecordApiService) {}
+  public constructor(private distanceBasedRecordApiService: DistanceBasedRecordApiService) {}
 
-  async ngOnInit() {
+  public async ngOnInit() {
     this.recordData = await this.distanceBasedRecordApiService.getRecords();
   }
 }

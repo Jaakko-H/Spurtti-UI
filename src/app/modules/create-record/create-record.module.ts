@@ -5,6 +5,7 @@ import { CreateRecordRoutingModule } from './create-record.routing';
 import { SharedModule } from '@app/shared';
 import { MatCardModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
   imports: [
     CommonModule,
     CreateRecordRoutingModule,
+    FormsModule,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
