@@ -34,6 +34,9 @@ export class CreateRecordComponent implements OnInit {
   }
 
   private validateDuration(): number {
+    if (!this.durationString) {
+      return NaN;
+    }
     let hours = 0;
     let minutes = 0;
     let seconds = 0;
